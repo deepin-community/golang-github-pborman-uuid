@@ -1,5 +1,70 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-pborman-uuid (1.2.0-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 05 Feb 2021 02:38:11 +0000
+
+golang-github-pborman-uuid (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Removed transitional package "golang-uuid-dev" (Closes: #939219)
+    Thanks, Holger Levsen.
+  * DH to version 12
+  * Standards-Version: 4.4.1
+  * (Build-)Depends += "golang-github-google-uuid-dev"
+  * Added myself to Uploaders
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 30 Dec 2019 18:53:36 +1100
+
+golang-github-pborman-uuid (1.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Updated Maintainer field.
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4; Priority: optional.
+  * debhelper & compat to version 11.
+  * golang-go --> golang-any.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 15 Jun 2018 02:41:19 +1000
+
+golang-github-pborman-uuid (0.0+git20150824.0.cccd189-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+  * Remove Built-Using from arch:all -dev package
+
+  [ Michael Stapelberg ]
+  * Switch to XS-Go-Import-Path
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sat, 10 Feb 2018 14:36:43 +0100
+
+golang-github-pborman-uuid (0.0+git20150824.0.cccd189-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version.
+  * Upstream moved from "https://code.google.com/p/go-uuid/" to
+    "https://github.com/pborman/uuid". Renamed source and binary packages;
+    added transitional package; updated Homepage URL.
+  * Added "debian/watch" file; removed obsolete lintian override.
+  * Added "debian/gbp.conf"
+  * control:
+    + Standards-Version: 3.9.6.
+    + Updated Vcs-Browser URL.
+    + Set Maintainer to "pkg-go-maintainers@lists.alioth.debian.org".
+  * Ignore test failures (Closes: #795520).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 04 Sep 2015 05:57:15 +1000
+
+golang-uuid (0.0~hg20140512-1) unstable; urgency=low
+
+  * Initial release (Closes: #747912)
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Tue, 13 May 2014 11:17:31 -0300

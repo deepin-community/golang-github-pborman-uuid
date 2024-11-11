@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+export DH_OPTIONS
+
 
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_test:
+	## Continue on test failures, see "https://github.com/pborman/uuid/issues/43".
+	-dh_auto_test
